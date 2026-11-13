@@ -17,7 +17,7 @@ import pyopenjtalk
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / 'content'
-ASSETS = ROOT.parent / 'assets'
+ASSETS = ROOT / 'dist' / 'assets'
 READINGS = ASSETS / 'readings'
 SYNTHESIS_VERSION = 'openjtalk-mei-0.4.1.post10-32k-v1'
 

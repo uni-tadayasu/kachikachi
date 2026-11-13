@@ -3,7 +3,7 @@ import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const publicFiles = [
-  'index.html', '404.html', 'assets', 'machines', 'guides', 'glossary', 'updates', 'play', 'site.webmanifest',
+  'index.html', '404.html', 'assets', 'machines', 'guides', 'glossary', 'updates', 'play', 'tools', 'site.webmanifest',
 ];
 const localAttribute = /\b(href|src|action|poster)="([^"]+)"/gi;
 const scriptLd = /(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/i;
