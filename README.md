@@ -3,7 +3,7 @@
 ## Webサーバーに設置する
 
 1. ZIPを展開し、`index.html` が見えるフォルダーを開きます。
-2. `index.html`、`404.html`（含まれる場合）、`assets/`、`machines/`、`guides/`、`glossary/`、`updates/`、`play/`、`site.webmanifest`、`robots.txt`、`sitemap.xml`（含まれる場合）を、フォルダー構成を保って公開先にアップロードします。公開先にはルートとサブフォルダーのどちらも使えます。
+2. `index.html`、`404.html`（含まれる場合）、`assets/`、`machines/`、`guides/`、`glossary/`、`updates/`、`play/`、`tools/`、`site.webmanifest`、`robots.txt`、`sitemap.xml`（含まれる場合）を、フォルダー構成を保って公開先にアップロードします。公開先にはルートとサブフォルダーのどちらも使えます。
 3. HTTPSで公開したURLを開きます。添付曲のBGMと読み上げは「音声設定」や各ページの再生ボタンから操作できます。
 
 Windowsで手元の表示を確認するときは、Pythonが使える場合、展開先でターミナルを開いて `py -m http.server 8000` を実行し、[http://localhost:8000/](http://localhost:8000/) を開いてください。HTMLのダブルクリックではブラウザの制限でゲームや音声を読み込めません。
@@ -38,7 +38,7 @@ node source/scripts/static-site.mjs --merge-feed new-feed.json assets/feed-snaps
 
 | 場所 | 内容 |
 | --- | --- |
-| `index.html`、`machines/`、`guides/`、`glossary/`、`updates/`、`play/` | 公開する各ページのHTML |
+| `index.html`、`machines/`、`guides/`、`glossary/`、`updates/`、`play/`、`tools/` | 公開する各ページのHTML |
 | `assets/` | CSS、JavaScript、画像、サイトアイコン、OGP、BGM、読み上げ音声 |
 | `source/content/` | 機種データ、遊技ガイド、用語、読み上げ原稿、新着の元データ |
 | `source/scripts/` | ページ・読み上げ音声の生成、公式情報の取得、公開用ファイルの組み立て |
@@ -46,8 +46,6 @@ node source/scripts/static-site.mjs --merge-feed new-feed.json assets/feed-snaps
 
 公開用HTMLと素材は展開先で直接編集できます。掲載機種の遊技デモはブラウザ内で動作します。新着一覧の外部リンク先はメーカー公式ページです。
 
-機種データや記事本文を `source/content/` で編集した場合は、以下で公開用HTMLを作り直せます。新規の出力フォルダーと実際の公開URLを指定してください。元のファイルは直接変更されません。読み上げ原稿を編集した場合は、FFmpegと `pyopenjtalk-plus==0.4.1.post10` を用意して `python source/scripts/build-readings.py` を先に実行すると、対応する音声を `assets/` に生成できます。
+## 筐体デモと分析
 
-```sh
-node source/scripts/rebuild-portable.mjs ../publish-new https://example.jp/
-```
+機種ページで無料の筐体デモ、小役カウンター、確率計算、出典付きの注目演出を確認できます。カウンターはブラウザ内に機種・遊技状態別で保存されます。確率計算は入力値と公表条件に基づきます。実台の内部状態を直接読み取る機能はありません。
