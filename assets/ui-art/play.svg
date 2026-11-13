@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="120" viewBox="0 0 280 120">
+  <defs>
+    <radialGradient id="glow" cx="73%" cy="50%" r="62%">
+      <stop stop-color="#c58e5b" stop-opacity=".3"/>
+      <stop offset=".58" stop-color="#c58e5b" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#c58e5b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade">
+      <stop offset="10%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="art-mask"><rect width="280" height="120" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="280" height="120" fill="url(#glow)"/>
+  <g mask="url(#art-mask)">
+    <path d="M104 120 205 0m-74 120L232 0m-63 120L270 0m-55 120L280 40m-36 80 36-44" fill="none" stroke="#c58e5b" stroke-opacity=".28"/>
+    <path d="M151 60H126m136 0h18m-137-30h-26m17 61h16m114 0h15" fill="none" stroke="#c58e5b" stroke-opacity=".46" stroke-dasharray="1 2"/>
+    
+      <g transform="translate(209 61)">
+        <path d="m0-52 20 11 21 2 8 20 10 19-10 19-8 20-21 2-20 11-20-11-21-2-8-20-10-19 10-19 8-20 21-2Z" fill="#55372a" fill-opacity=".62" stroke="#c09365"/>
+        <circle r="43" fill="#1f1819" stroke="#b58363"/>
+        <circle r="36" fill="#53362e" stroke="#d6ab77" stroke-opacity=".8"/>
+        <circle r="29" fill="#2e201e" stroke="#b98b67" stroke-dasharray="1.5 3"/>
+        <path d="m-10-19 30 19-30 19z" fill="#bd8262" stroke="#edc18f" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M0-45v6m0 78v6m-45-45h6m78 0h6" stroke="#ebc189" stroke-linecap="round"/>
+      </g>
+    
+  </g>
+</svg>

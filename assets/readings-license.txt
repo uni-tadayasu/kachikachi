@@ -1,0 +1,10 @@
+日本語読み上げ音声のクレジット
+
+音声合成エンジン: Open JTalk / pyopenjtalk-plus
+使用音声: HTS Voice "Mei" (mei_normal), MMDAgent Project Team
+Copyright (c) 2009–2013 Nagoya Institute of Technology, Department of Computer Science
+https://www.mmdagent.jp/
+Creative Commons Attribution 3.0 Unported
+https://creativecommons.org/licenses/by/3.0/
+
+このサイトのひらがな・カタカナの読み原稿を音声合成し、MP3に変換しました。

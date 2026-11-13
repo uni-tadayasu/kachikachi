@@ -1,0 +1,17 @@
+{
+  "name": "絶対勝てる！",
+  "short_name": "絶対勝てる！",
+  "start_url": "./",
+  "display": "standalone",
+  "lang": "ja",
+  "theme_color": "#0b0c0e",
+  "background_color": "#0b0c0e",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "scope": "./"
+}

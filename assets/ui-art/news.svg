@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="120" viewBox="0 0 280 120">
+  <defs>
+    <radialGradient id="glow" cx="73%" cy="50%" r="62%">
+      <stop stop-color="#ca8957" stop-opacity=".3"/>
+      <stop offset=".58" stop-color="#ca8957" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#ca8957" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade">
+      <stop offset="10%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="art-mask"><rect width="280" height="120" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="280" height="120" fill="url(#glow)"/>
+  <g mask="url(#art-mask)">
+    <path d="M104 120 205 0m-74 120L232 0m-63 120L270 0m-55 120L280 40m-36 80 36-44" fill="none" stroke="#ca8957" stroke-opacity=".28"/>
+    <path d="M151 60H126m136 0h18m-137-30h-26m17 61h16m114 0h15" fill="none" stroke="#ca8957" stroke-opacity=".46" stroke-dasharray="1 2"/>
+    
+      <g transform="translate(212 61)">
+        <circle r="48" fill="#5a3b2d" fill-opacity=".4" stroke="#a88058"/>
+        <circle r="42" fill="#21191a" stroke="#a88058" stroke-opacity=".62"/>
+        <circle r="36" fill="none" stroke="#c5986a" stroke-dasharray="1 3" stroke-opacity=".7"/>
+        <path d="M0-41v8M0 33v8m-41-41h8m66 0h8m-29-29-5 5m-47 47-5 5m0-57 5 5m47 47 5 5" fill="none" stroke="#ddb681"/>
+        <path d="M-18-19h36v39h-36z" fill="#5e3e31" stroke="#d4a77a"/>
+        <path d="M-11-11h22M-11-5h22M-11 1h13m-13 6h13m-13 6h13" fill="none" stroke="#e4bd8f" stroke-opacity=".75"/>
+        <path d="M7 0h4v14H7z" fill="#8d4c49" stroke="#e2ad7c"/>
+        <path d="M-55-9a56 56 0 0 1 99-24m-1-7 1 7-7 1M55 9a56 56 0 0 1-99 24m1 7-1-7 7-1" fill="none" stroke="#e0a871" stroke-opacity=".78" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    
+  </g>
+</svg>

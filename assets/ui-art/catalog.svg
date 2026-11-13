@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="120" viewBox="0 0 280 120">
+  <defs>
+    <radialGradient id="glow" cx="73%" cy="50%" r="62%">
+      <stop stop-color="#c79161" stop-opacity=".3"/>
+      <stop offset=".58" stop-color="#c79161" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#c79161" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade">
+      <stop offset="10%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="art-mask"><rect width="280" height="120" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="280" height="120" fill="url(#glow)"/>
+  <g mask="url(#art-mask)">
+    <path d="M104 120 205 0m-74 120L232 0m-63 120L270 0m-55 120L280 40m-36 80 36-44" fill="none" stroke="#c79161" stroke-opacity=".28"/>
+    <path d="M151 60H126m136 0h18m-137-30h-26m17 61h16m114 0h15" fill="none" stroke="#c79161" stroke-opacity=".46" stroke-dasharray="1 2"/>
+    
+      <g transform="translate(152 12) rotate(-9 43 55)">
+        <rect x="0" y="0" width="84" height="102" rx="8" fill="#1d1614" stroke="#94734b" stroke-width="1.2"/>
+        <rect x="7" y="8" width="70" height="86" rx="5" fill="none" stroke="#b79160" stroke-opacity=".65"/>
+        <rect x="12" y="14" width="60" height="57" rx="5" fill="#6a4732" fill-opacity=".32" stroke="#d5a878"/>
+        <circle cx="42" cy="43" r="21" fill="none" stroke="#ca9c60" stroke-dasharray="1.5 2.5"/>
+        <circle cx="42" cy="43" r="16" fill="none" stroke="#e9c18d" stroke-opacity=".72"/>
+        <path d="M42 28v30M27 43h30m-25-10 20 20m0-20L32 53" stroke="#d4a36b" stroke-opacity=".44"/>
+        <path d="m42 35 8 8-8 8-8-8z" fill="#efbd77" fill-opacity=".55" stroke="#efd298"/>
+        <path d="M17 78h29m-29 5h21m-21 5h26" stroke="#bd905e" stroke-opacity=".65"/>
+        <circle cx="59" cy="83" r="5" fill="#9b5550" stroke="#dcaa72"/>
+      </g>
+      <g transform="translate(224 35) rotate(14 19 31)" opacity=".8">
+        <rect width="44" height="62" rx="5" fill="#1c1515" stroke="#af8460"/>
+        <path d="M7 10h30v42H7zM11 15h22v26H11zM15 46h12" fill="none" stroke="#9b7957"/>
+        <path d="m22 18 9 10-9 10-9-10z" fill="#71523c" stroke="#d8ab77"/>
+      </g>
+    
+  </g>
+</svg>

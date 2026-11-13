@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="120" viewBox="0 0 280 120">
+  <defs>
+    <radialGradient id="glow" cx="73%" cy="50%" r="62%">
+      <stop stop-color="#bf7569" stop-opacity=".3"/>
+      <stop offset=".58" stop-color="#bf7569" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#bf7569" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade">
+      <stop offset="10%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="art-mask"><rect width="280" height="120" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="280" height="120" fill="url(#glow)"/>
+  <g mask="url(#art-mask)">
+    <path d="M104 120 205 0m-74 120L232 0m-63 120L270 0m-55 120L280 40m-36 80 36-44" fill="none" stroke="#bf7569" stroke-opacity=".28"/>
+    <path d="M151 60H126m136 0h18m-137-30h-26m17 61h16m114 0h15" fill="none" stroke="#bf7569" stroke-opacity=".46" stroke-dasharray="1 2"/>
+    
+      <g transform="translate(145 18) rotate(-5 55 42)">
+        <path d="M9 9 18 0h87l8 9v64l-8 8H18l-9-8Z" fill="#3c2926" stroke="#d7a477" stroke-width="1.25"/>
+        <path d="M14 14l8-8h79l7 8v52l-7 8H22l-8-8Z" fill="none" stroke="#c69773" stroke-opacity=".62"/>
+        <path d="M23 18h77v42H23z" fill="#251c1c" stroke="#ddad88"/>
+        <rect x="27" y="22" width="21" height="34" rx="4" fill="#77534a" stroke="#d2a27f"/>
+        <rect x="51" y="22" width="21" height="34" rx="4" fill="#77534a" stroke="#d2a27f"/>
+        <rect x="75" y="22" width="21" height="34" rx="4" fill="#77534a" stroke="#d2a27f"/>
+        <path d="M27 27h21m3 0h21m3 0h21M27 51h21m3 0h21m3 0h21" stroke="#e0b48c" stroke-opacity=".55"/>
+        <path d="m37 32 7 7-7 7-7-7zm24 0 7 7-7 7-7-7zm24 0 7 7-7 7-7-7z" fill="#b87367" stroke="#f0c49d"/>
+        <path d="M23 65h19m39 0h19" stroke="#be8f73" stroke-opacity=".75"/>
+        <circle cx="56" cy="66" r="2.5" fill="#c09877"/><circle cx="62" cy="66" r="2.5" fill="#c09877"/><circle cx="68" cy="66" r="2.5" fill="#c09877"/>
+        <path d="M114 27h7v18h-7" fill="#7f504b" stroke="#d2a282"/>
+      </g>
+    
+  </g>
+</svg>
