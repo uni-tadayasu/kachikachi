@@ -1,0 +1,65 @@
+name: 絶対勝てる！ GitHub Pages
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0 * * *'
+
+concurrency:
+  group: zettai-github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: 公式機種一覧を更新
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          set -euo pipefail
+          candidate="$RUNNER_TEMP/zettai-feed.json"
+          if node source/scripts/fetch-catalog.mjs "$candidate"; then
+            node source/scripts/static-site.mjs --merge-feed "$candidate" assets/feed-snapshot.json
+            if ! git diff --quiet -- assets/feed-snapshot.json; then
+              git config user.name 'github-actions[bot]'
+              git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+              git add assets/feed-snapshot.json
+              git commit -m 'Update official machine listings'
+              git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
+            fi
+          fi
+      - name: Pagesの公開URLを取得
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: 公開ファイルを準備
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          test -n "$SITE_URL"
+          node source/scripts/static-site.mjs . "$RUNNER_TEMP/zettai-site" "$SITE_URL"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/zettai-site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pagesに公開
+        id: deployment
+        uses: actions/deploy-pages@v4
