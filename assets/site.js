@@ -1,5 +1,8 @@
 import { createAudioController } from './audio.js';
-import { mountPlay } from './play.js';
+import { mountPlay } from './play.js?v=2';
+import { mountCounter } from './counter.js';
+import { mountProbability } from './probability.js';
+import { probabilityModels, jugglerSettings } from './probability-data.mjs';
 
 const portableRoot = document.querySelector('meta[name="zettai-site-root"]')?.content;
 const siteRoot = new URL(portableRoot || '/', location.href);
@@ -129,12 +132,70 @@ function filterResults() {
 }
 
 let disposePlay;
+let disposeTools;
+function mountMachineTools(panel, machine, unit = '') {
+  let probability;
+  const counter = mountCounter(panel.querySelector('[data-counter-mount]'), {
+    ...machine, id:unit ? machine.id+':unit:'+unit : machine.id,
+    onChange: state => probability?.setCounts(state),
+  });
+  probability = mountProbability(panel.querySelector('[data-probability-mount]'), {
+    ...machine, models:probabilityModels[machine.id] || [],
+    settings:machine.id === 'im-juggler-ex' ? jugglerSettings : [],
+    counterState:counter.getState(),
+  });
+  return () => {
+    counter.destroy();
+    probability.destroy();
+  };
+}
+function bindMachineTools() {
+  disposeTools?.();
+  disposeTools = undefined;
+  const panel = document.querySelector('[data-machine-tools]');
+  if (!panel) return;
+  const picker = document.querySelector('[data-tool-picker]');
+  const unit = document.querySelector('[data-tool-unit]');
+  const effectsLink = document.querySelector('[data-tool-machine-link]');
+  const custom = document.querySelector('[data-tool-custom]');
+  const name = document.querySelector('[data-tool-custom-name]');
+  if (picker) {
+    const params = new URLSearchParams(location.search);
+    const initial = params.get('machine');
+    if ([...picker.options].some(option=>option.value===initial)) picker.value=initial;
+    name.value = (params.get('name') || '').slice(0,80);
+  }
+  function updateMachine() {
+    disposeTools?.();
+    const device = unit.value.normalize('NFKC').replace(/[^0-9]/g,'').slice(0,8);
+    unit.value = device;
+    let machine = {id:panel.dataset.toolId,title:panel.dataset.toolTitle,type:panel.dataset.toolType};
+    if (picker) {
+      const {value,dataset} = picker.selectedOptions[0];
+      const manual = value.startsWith('manual-');
+      custom.hidden = !manual;
+      effectsLink.hidden = manual;
+      if (!manual) effectsLink.href = new URL('machines/'+value+'/#effects',siteRoot).href;
+      const title = name.value.normalize('NFKC').trim();
+      machine = manual ? {
+        id:value+(title?'-'+title:''), title:title || (value==='manual-slot'?'パチスロ':'パチンコ'),
+        type:value==='manual-slot'?'slot':'pachinko',
+      } : {id:value,title:dataset.title,type:dataset.kind};
+    }
+    disposeTools = mountMachineTools(panel,machine,device);
+  }
+  picker?.addEventListener('change',updateMachine);
+  name?.addEventListener('change',updateMachine);
+  unit.addEventListener('change',updateMachine);
+  updateMachine();
+}
 function bindPage() {
   disposePlay?.();
   disposePlay = undefined;
+  bindMachineTools();
   const play = document.querySelector('[data-play-id]');
   if (play) disposePlay = mountPlay(play, {
-    id:play.dataset.playId, title:play.dataset.playTitle, type:play.dataset.playType,
+    id:play.dataset.playId, title:play.dataset.playTitle, type:play.dataset.playType, onMusicToggle:() => audio.toggleMusic(),
   });
   const remote = document.querySelector('[data-remote-play]');
   const requested = new URLSearchParams(location.search).get('feed');
@@ -216,7 +277,7 @@ async function loadRemotePlay(root, id) {
     const link = sourceLink(item.url,'メーカー公式情報 ↗');
     link.className = 'text-link';
     root.replaceChildren(make('h2',item.title),host,link);
-    disposePlay = mountPlay(host,item);
+    disposePlay = mountPlay(host,{...item,onMusicToggle:() => audio.toggleMusic()});
     if (location.hash === '#play') root.scrollIntoView({block:'start'});
   } catch {
     if (root.isConnected) root.replaceChildren(make('p','この機種のデモは現在表示できません。下の一覧から遊ぶ機種を選べます。'));
@@ -255,8 +316,14 @@ async function loadFeed(feed) {
       demoUrl.hash = 'play';
       play.href = demoUrl.href;
       play.setAttribute('aria-label',item.title + 'の遊技デモ');
+      const analysis = make('a','分析','text-link');
+      const analysisUrl = new URL('tools/',siteRoot);
+      analysisUrl.searchParams.set('machine',item.type==='slot'?'manual-slot':'manual-pachinko');
+      analysisUrl.searchParams.set('name',item.title);
+      analysis.href = analysisUrl.href;
+      analysis.setAttribute('aria-label',item.title + 'の確率分析（手入力）');
       const actions = make('div',undefined,'feed-actions');
-      actions.append(play,listen);
+      actions.append(play,analysis,listen);
       li.append(a,actions);
       list.append(li);
     }
@@ -325,7 +392,7 @@ document.addEventListener('click', event => {
   if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return;
   if (!url.pathname.startsWith(siteRoot.pathname)) return;
   const route = url.pathname.slice(siteRoot.pathname.length);
-  if (route && route !== 'index.html' && !/^(machines|guides|glossary|updates|play)\//.test(route)) return;
+  if (route && route !== 'index.html' && !/^(machines|guides|glossary|updates|play|tools)\//.test(route)) return;
   event.preventDefault();
   navigate(url,true);
 });

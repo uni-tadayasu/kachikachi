@@ -48,5 +48,6 @@ export const readingClips = {
   "term-st": "term-st-4cc560f91f.mp3",
   "term-start-pocket": "term-start-pocket-983a59eb5b.mp3",
   "term-target-stop": "term-target-stop-8b629548d7.mp3",
+  "tools": "tools-834100c01d.mp3",
   "updates": "updates-c21d004ede.mp3"
 };

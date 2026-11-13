@@ -1,0 +1,29 @@
+.probability-tool{display:grid;gap:16px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.probability-panel{min-width:0;padding:clamp(15px,2.4vw,26px);border:1px solid #544331;border-radius:10px;background:radial-gradient(ellipse at top right,#30241c 0%,#181719 62%);color:var(--text,#f4ebda)}
+.probability-panel h3{font:700 clamp(20px,2.4vw,27px)/1.35 var(--serif,serif)}
+.probability-intro,.probability-context{margin:7px 0 16px;color:var(--muted,#c1b7a8)}
+.probability-context{margin-bottom:10px;font-size:13px}
+.probability-context:empty{display:none}
+.probability-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.probability-inputs>label{display:grid;align-content:start;gap:5px;min-width:0;font-size:13px;font-weight:700;color:#f1e4d1}
+.probability-inputs>label[hidden]{display:none}
+.probability-inputs>label:first-child{grid-column:1/-1}
+.probability-inputs small{font-size:12px;font-weight:400;color:var(--muted,#c1b7a8)}
+.probability-inputs input,.probability-inputs select{width:100%;min-width:0;min-height:44px;margin:0;padding:8px 9px;border:1px solid #66533d;border-radius:5px;background:#161417;color:var(--text,#f4ebda);font:inherit;font-weight:500}
+.probability-inputs select{padding-right:12px;text-overflow:ellipsis}
+.probability-inputs input:focus-visible,.probability-inputs select:focus-visible,.probability-assumptions summary:focus-visible{outline:2px solid #edc27d;outline-offset:2px}
+.probability-context a,.probability-assumptions a{color:#f0ca91;text-decoration:underline;text-underline-offset:.18em}
+.probability-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px}
+.probability-actions .button:disabled{opacity:.52;cursor:not-allowed}
+.probability-result{margin-top:15px;padding:14px 13px;border-radius:7px;border:1px solid #6d5335;background:#241c16}
+.probability-result:empty{display:none}
+.probability-value{display:block;color:#f4d59e;font-size:clamp(19px,3vw,28px);line-height:1.35;overflow-wrap:anywhere}
+.probability-result p{margin:6px 0;color:#f4e5d1}
+.probability-result dl{margin:8px 0 0}
+.probability-result dl div{display:flex;justify-content:space-between;gap:7px;flex-wrap:wrap;padding-top:6px;border-top:1px solid #55432e;margin-top:6px}
+.probability-result dd{margin:0;font-weight:700}
+.probability-assumptions{margin-top:14px;color:var(--muted,#c1b7a8);font-size:13px}
+.probability-assumptions summary{cursor:pointer;color:#eac892;font-weight:700}
+.probability-assumptions p{margin:7px 0}
+@media(max-width:870px){.probability-tool{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:370px){.probability-inputs{grid-template-columns:minmax(0,1fr)}}
