@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T02:54:26.530Z",
+  "updatedAt": "2026-11-14T06:37:58.313Z",
   "items": [
     {
       "id": "sammy-slot-1vhdbc0",
@@ -476,36 +476,36 @@
       "name": "サミー（パチンコ）",
       "url": "https://www.sammy.co.jp/japanese/products/pachinko/",
       "ok": true,
-      "checkedAt": "2026-11-13T02:54:26.530Z"
+      "checkedAt": "2026-11-14T06:37:58.313Z"
     },
     {
       "id": "sammy-slot",
       "name": "サミー（パチスロ）",
       "url": "https://www.sammy.co.jp/japanese/products/pachislot/",
       "ok": true,
-      "checkedAt": "2026-11-13T02:54:26.530Z"
+      "checkedAt": "2026-11-14T06:37:58.313Z"
     },
     {
       "id": "heiwa-pachinko",
       "name": "平和（パチンコ）",
       "url": "https://www.heiwanet.co.jp/products/pachinko/",
       "ok": true,
-      "checkedAt": "2026-11-13T02:54:26.530Z"
+      "checkedAt": "2026-11-14T06:37:58.313Z"
     },
     {
       "id": "heiwa-slot",
       "name": "平和（パチスロ）",
       "url": "https://www.heiwanet.co.jp/products/pachislot/",
       "ok": true,
-      "checkedAt": "2026-11-13T02:54:26.530Z"
+      "checkedAt": "2026-11-14T06:37:58.313Z"
     },
     {
       "id": "kitadenshi-slot",
       "name": "北電子（パチスロ）",
       "url": "https://www.kitadenshi.co.jp/hallnews/slot/",
       "ok": true,
-      "checkedAt": "2026-11-13T02:54:26.530Z"
+      "checkedAt": "2026-11-14T06:37:58.313Z"
     }
   ],
-  "stale": true
+  "stale": false
 }
