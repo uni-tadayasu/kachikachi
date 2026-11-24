@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T07:50:11.718Z",
+  "updatedAt": "2026-11-24T10:02:05.379Z",
   "items": [
     {
       "id": "sammy-slot-1vhdbc0",
@@ -36,6 +36,18 @@
       "dateKind": "release",
       "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_hok_ke_gekito/",
       "sourceUrl": "https://www.sammy.co.jp/japanese/products/pachinko/"
+    },
+    {
+      "id": "heiwa-pachinko-dr0izw",
+      "sourceId": "heiwa-pachinko",
+      "title": "e麻雀物語Ⅴ ～天命～",
+      "type": "pachinko",
+      "maker": "平和",
+      "date": "2027-01",
+      "dateLabel": "2027年1月",
+      "dateKind": "release",
+      "url": "https://www.heiwanet.co.jp/products/pachinko/pmj5/",
+      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
     },
     {
       "id": "heiwa-slot-25wr6x",
@@ -96,30 +108,6 @@
       "dateKind": "release",
       "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_jyu_oh_sh/",
       "sourceUrl": "https://www.sammy.co.jp/japanese/products/pachinko/"
-    },
-    {
-      "id": "heiwa-pachinko-1lu72m8",
-      "sourceId": "heiwa-pachinko",
-      "title": "eプリンセス・プリンシパル",
-      "type": "pachinko",
-      "maker": "平和",
-      "date": "2026-11",
-      "dateLabel": "2026年11月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/ppp1/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
-      "id": "heiwa-pachinko-qllm8z",
-      "sourceId": "heiwa-pachinko",
-      "title": "e範馬刃牙 129ver.",
-      "type": "pachinko",
-      "maker": "アムテックス",
-      "date": "2026-10",
-      "dateLabel": "2026年10月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/bk2a/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
     },
     {
       "id": "sammy-slot-1vq2qpa",
@@ -194,18 +182,6 @@
       "sourceUrl": "https://www.sammy.co.jp/japanese/products/pachinko/"
     },
     {
-      "id": "heiwa-pachinko-y2dqic",
-      "sourceId": "heiwa-pachinko",
-      "title": "eガールズ＆パンツァー 最終章 159ver.",
-      "type": "pachinko",
-      "maker": "平和",
-      "date": "2026-07",
-      "dateLabel": "2026年7月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/gp3l/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
       "id": "kitadenshi-slot-gqv3he",
       "sourceId": "kitadenshi-slot",
       "title": "マイジャグラーVI",
@@ -242,18 +218,6 @@
       "sourceUrl": "https://www.kitadenshi.co.jp/hallnews/slot/"
     },
     {
-      "id": "heiwa-pachinko-eam3s7",
-      "sourceId": "heiwa-pachinko",
-      "title": "eルパン三世VSキャッツ・アイ157ver. 極限突破ブッた斬り7500",
-      "type": "pachinko",
-      "maker": "アムテックス",
-      "date": "2026-05",
-      "dateLabel": "2026年5月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/lvcl/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
       "id": "sammy-slot-1obkzq",
       "sourceId": "sammy-slot",
       "title": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -278,30 +242,6 @@
       "sourceUrl": "https://www.sammy.co.jp/japanese/products/pachislot/"
     },
     {
-      "id": "heiwa-pachinko-der72v",
-      "sourceId": "heiwa-pachinko",
-      "title": "e８６―エイティシックス―",
-      "type": "pachinko",
-      "maker": "アムテックス",
-      "date": "2026-04",
-      "dateLabel": "2026年4月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/es1/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
-      "id": "heiwa-pachinko-y9ly5m",
-      "sourceId": "heiwa-pachinko",
-      "title": "P戦国乙女7 終焉の関ヶ原 99ver.",
-      "type": "pachinko",
-      "maker": "アムテックス",
-      "date": "2026-03",
-      "dateLabel": "2026年3月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/sg8-99/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
       "id": "sammy-slot-17hr8qs",
       "sourceId": "sammy-slot",
       "title": "スマスロ 甲鉄城のカバネリ 海門（うなと）決戦",
@@ -312,30 +252,6 @@
       "dateKind": "release",
       "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_kab_ne/",
       "sourceUrl": "https://www.sammy.co.jp/japanese/products/pachislot/"
-    },
-    {
-      "id": "heiwa-pachinko-1fnc5zu",
-      "sourceId": "heiwa-pachinko",
-      "title": "P黄門ちゃま寿限無 99ver.",
-      "type": "pachinko",
-      "maker": "平和",
-      "date": "2026-02",
-      "dateLabel": "2026年2月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/km9-99/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
-    },
-    {
-      "id": "heiwa-pachinko-1380u7f",
-      "sourceId": "heiwa-pachinko",
-      "title": "P黄門ちゃま寿限無 LLサイズ 259ver.",
-      "type": "pachinko",
-      "maker": "平和",
-      "date": "2026-02",
-      "dateLabel": "2026年2月",
-      "dateKind": "release",
-      "url": "https://www.heiwanet.co.jp/products/pachinko/km9-259/",
-      "sourceUrl": "https://www.heiwanet.co.jp/products/pachinko/"
     },
     {
       "id": "sammy-slot-14cgqcw",
@@ -404,35 +320,35 @@
       "name": "サミー（パチンコ）",
       "url": "https://www.sammy.co.jp/japanese/products/pachinko/",
       "ok": true,
-      "checkedAt": "2026-11-23T07:50:11.718Z"
+      "checkedAt": "2026-11-24T10:02:05.379Z"
     },
     {
       "id": "sammy-slot",
       "name": "サミー（パチスロ）",
       "url": "https://www.sammy.co.jp/japanese/products/pachislot/",
       "ok": true,
-      "checkedAt": "2026-11-23T07:50:11.718Z"
+      "checkedAt": "2026-11-24T10:02:05.379Z"
     },
     {
       "id": "heiwa-pachinko",
       "name": "平和（パチンコ）",
       "url": "https://www.heiwanet.co.jp/products/pachinko/",
       "ok": true,
-      "checkedAt": "2026-11-23T07:50:11.718Z"
+      "checkedAt": "2026-11-24T10:02:05.379Z"
     },
     {
       "id": "heiwa-slot",
       "name": "平和（パチスロ）",
       "url": "https://www.heiwanet.co.jp/products/pachislot/",
       "ok": true,
-      "checkedAt": "2026-11-23T07:50:11.718Z"
+      "checkedAt": "2026-11-24T10:02:05.379Z"
     },
     {
       "id": "kitadenshi-slot",
       "name": "北電子（パチスロ）",
       "url": "https://www.kitadenshi.co.jp/hallnews/slot/",
       "ok": true,
-      "checkedAt": "2026-11-23T07:50:11.718Z"
+      "checkedAt": "2026-11-24T10:02:05.379Z"
     }
   ],
   "stale": false
